@@ -3,403 +3,259 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Eudirok Jewellery L.L.C. S.O.C. trades precious metals, diamonds and gemstones from Dubai. Gold, silver, platinum, palladium, jewellery, import and export.">
+<title>Eudirok Jewellery | Precious metals and stones trading, Dubai</title>
+<meta name="description" content="Eudirok Jewellery L.L.C. S.O.C. trades physical gold, silver, platinum, palladium, diamonds and gemstones from Dubai. Import and export, assay, storage and private client services.">
+<meta name="theme-color" content="#0f0e0b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Eudirok Jewellery | Precious metals and stones, traded from Dubai">
+<meta property="og:description" content="Physical gold, silver, platinum, palladium and gemstones. Licensed in Dubai.">
+<meta property="og:image" content="https://zianky.github.io/Eudirok/media/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="media/logo.png">
-<title>Eudirok Jewellery</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: sticky header; dark media hero (looping video) with text bottom-left; hairline-ruled sections with imagery in the side column; one converter tool. */
-:root {
-  --bg: #F2F3F0;
-  --surface: #E7E9E4;
-  --fg: #15191B;
-  --muted: #566065;
-  --line: #CBD0CB;
-  --accent: #8A5E0E;
-  --on-accent: #FFFFFF;
-  --hero-fg: #F6F4EC;
-  --hero-muted: #BAC4C7;
-  --gold: #D6A64A;
-  --on-gold: #14100A;
-  --logo-tile: transparent;
-  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
-  --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
-  --font-data: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s6: 24px; --s8: 32px; --s12: 48px; --s16: 64px;
-  --radius: 6px;
-  --radius-lg: 12px;
-  --ease: cubic-bezier(0.23, 1, 0.32, 1);
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #101416; --surface: #181E21; --fg: #ECEEEA; --muted: #9DA7AB;
-    --line: #2B3438; --accent: #D6A64A; --on-accent: #14100A;
-    --logo-tile: #F2F3F0;
-    color-scheme: dark;
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="css/site.css">
+<script>document.documentElement.className += ' js';</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Eudirok Jewellery L.L.C. S.O.C.",
+  "url": "https://eudirok.com",
+  "logo": "https://zianky.github.io/Eudirok/media/logo.png",
+  "email": "info@eudirok.com",
+  "telephone": "+971585509345",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Abstract Business Center L.L.C., Building 06, Oud Metha",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
   }
 }
-:root[data-theme="dark"] {
-  --bg: #101416; --surface: #181E21; --fg: #ECEEEA; --muted: #9DA7AB;
-  --line: #2B3438; --accent: #D6A64A; --on-accent: #14100A;
-  --logo-tile: #F2F3F0;
-  color-scheme: dark;
-}
-
-*, *::before, *::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--fg);
-  font: 400 1rem/1.55 var(--font-body);
-  padding-inline: clamp(16px, 4vw, 48px);
-  padding-block: 0;
-  -webkit-font-smoothing: antialiased;
-}
-.wrap { max-width: 1120px; margin-inline: auto; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; }
-p { margin: 0; }
-a { color: inherit; }
-img { display: block; max-width: 100%; height: auto; }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-section[id] { scroll-margin-top: 88px; }
-
-.ph { border-bottom: 1px dashed var(--accent); color: var(--fg); }
-
-/* Header */
-.top {
-  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
-  display: flex; align-items: center; justify-content: space-between; gap: var(--s4);
-  padding-block: var(--s4);
-  background: var(--bg);
-  border-bottom: 1px solid transparent;
-  transition: border-color 200ms var(--ease);
-}
-.top.scrolled { border-bottom-color: var(--line); }
-.mark { display: inline-flex; align-items: center; gap: var(--s3); font: 700 1.125rem/1 var(--font-display); letter-spacing: -0.01em; text-decoration: none; }
-.logo-tile { display: block; flex: none; background: var(--logo-tile); border-radius: var(--radius); padding: 2px; }
-.mark .logo-tile img { height: 48px; width: auto; }
-.nav { display: flex; gap: var(--s6); margin-inline: auto var(--s6); }
-.nav a { font-size: 0.9375rem; text-decoration: none; color: var(--muted); padding-block: var(--s2); transition: color 150ms var(--ease); }
-.nav a:hover { color: var(--fg); }
-.menu { display: none; position: relative; margin-left: auto; }
-.menu summary { list-style: none; }
-.menu summary::-webkit-details-marker { display: none; }
-.menu-panel {
-  position: absolute; right: 0; top: calc(100% + var(--s2)); z-index: 30;
-  min-width: 200px; display: grid; padding: var(--s2);
-  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
-  transform-origin: top right;
-  animation: pop 160ms var(--ease) both;
-}
-.menu-panel a { padding: var(--s3); text-decoration: none; min-height: 44px; display: flex; align-items: center; border-radius: 4px; }
-.menu-panel a:hover { background: var(--surface); }
-@keyframes pop { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: none; } }
-@media (max-width: 860px) {
-  .nav { display: none; }
-  .menu { display: block; }
-  .top > .btn-head { display: none; }
-}
-
-/* Buttons */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 44px; padding: 0 var(--s6);
-  font: 600 0.9375rem/1 var(--font-body);
-  border-radius: var(--radius); border: 1px solid var(--accent);
-  background: var(--accent); color: var(--on-accent);
-  text-decoration: none; cursor: pointer;
-  transition: transform 140ms var(--ease), background-color 150ms var(--ease), color 150ms var(--ease), border-color 150ms var(--ease);
-}
-.btn:hover { background: transparent; color: var(--accent); }
-.btn:active { transform: scale(0.97); }
-.btn-quiet { background: transparent; color: var(--fg); border-color: var(--line); }
-.btn-quiet:hover { border-color: var(--fg); color: var(--fg); background: transparent; }
-.btn-gold { background: var(--gold); border-color: var(--gold); color: var(--on-gold); }
-.btn-gold:hover { background: transparent; color: var(--gold); }
-.btn-ghost { background: transparent; border-color: rgba(246, 244, 236, 0.45); color: var(--hero-fg); }
-.btn-ghost:hover { border-color: var(--hero-fg); background: transparent; color: var(--hero-fg); }
-
-/* Hero */
-.hero {
-  position: relative; overflow: hidden; isolation: isolate;
-  min-height: clamp(540px, 80vh, 700px);
-  border-radius: var(--radius-lg);
-  background: #0B0F11;
-  color: var(--hero-fg);
-  display: flex; align-items: flex-end;
-}
-.hero video, .hero .poster {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; object-position: 55% center; z-index: -2;
-}
-.hero::after {
-  content: ""; position: absolute; inset: 0; z-index: -1;
-  background:
-    linear-gradient(90deg, rgba(11, 15, 17, 0.88) 0%, rgba(11, 15, 17, 0.55) 42%, rgba(11, 15, 17, 0) 75%),
-    linear-gradient(0deg, rgba(11, 15, 17, 0.7) 0%, rgba(11, 15, 17, 0) 45%);
-}
-.hero-inner { padding: clamp(24px, 5vw, 56px); max-width: 640px; }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.04; letter-spacing: -0.025em; }
-.hero p { margin-top: var(--s6); max-width: 44ch; font-size: 1.125rem; color: var(--hero-muted); }
-.cta { display: flex; flex-wrap: wrap; gap: var(--s3); margin-top: var(--s8); }
-.vtoggle {
-  position: absolute; right: var(--s4); bottom: var(--s4);
-  min-height: 44px; padding: 0 var(--s4);
-  font: 500 0.875rem/1 var(--font-body); color: var(--hero-fg);
-  background: rgba(11, 15, 17, 0.55); border: 1px solid rgba(246, 244, 236, 0.3); border-radius: var(--radius);
-  cursor: pointer; transition: transform 140ms var(--ease), background-color 150ms var(--ease);
-}
-.vtoggle:hover { background: rgba(11, 15, 17, 0.8); }
-.vtoggle:active { transform: scale(0.97); }
-@media (max-width: 640px) { .vtoggle { top: var(--s4); bottom: auto; } }
-
-.trade { display: grid; gap: var(--s6); padding-block: var(--s8) clamp(48px, 7vw, 80px); }
-@media (min-width: 720px) { .trade { grid-template-columns: 1fr 1fr; gap: var(--s12); } }
-.trade h2 { font: 500 0.875rem/1.3 var(--font-body); color: var(--muted); }
-.trade p { margin-top: var(--s2); font: 500 1.375rem/1.35 var(--font-display); letter-spacing: -0.01em; max-width: 30ch; }
-
-/* Sections */
-.section { border-top: 1px solid var(--line); padding-block: clamp(48px, 8vw, 96px); display: grid; gap: var(--s8); }
-@media (min-width: 880px) { .section { grid-template-columns: 1fr 2fr; gap: var(--s16); } }
-.section h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.02em; }
-.lede { margin-top: var(--s4); color: var(--muted); max-width: 36ch; }
-.body-copy { max-width: 58ch; }
-.body-copy + .body-copy { margin-top: var(--s4); }
-.side { display: grid; gap: var(--s6); align-content: start; }
-@media (min-width: 880px) { .side.stick { position: sticky; top: 104px; } }
-
-figure { margin: 0; }
-.photo { border-radius: var(--radius-lg); border: 1px solid var(--line); width: 100%; background: var(--surface); }
-.photo-wide { aspect-ratio: 16 / 9; object-fit: cover; }
-.photo-tall { aspect-ratio: 8 / 9; object-fit: cover; }
-
-/* Dubai gallery */
-.gallery { border-top: 1px solid var(--line); padding-block: clamp(48px, 8vw, 96px); display: grid; gap: var(--s8); }
-.gallery h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.02em; }
-.shots { display: grid; gap: var(--s6); }
-@media (min-width: 720px) { .shots { grid-template-columns: repeat(3, 1fr); } }
-.shots img { aspect-ratio: 4 / 5; object-fit: cover; }
-.shots figcaption { margin-top: var(--s3); font-size: 0.875rem; color: var(--muted); }
-
-
-.pair { display: grid; margin: var(--s8) 0 0; border-top: 1px solid var(--line); }
-.pair div { display: grid; gap: var(--s1) var(--s6); padding-block: var(--s4); border-bottom: 1px solid var(--line); }
-@media (min-width: 640px) { .pair div { grid-template-columns: 8rem 1fr; } }
-.pair dt { color: var(--muted); }
-.pair dd { margin: 0; max-width: 52ch; }
-
-.rows { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.row { display: grid; gap: var(--s2) var(--s6); padding-block: var(--s6); border-bottom: 1px solid var(--line); }
-@media (min-width: 640px) { .row { grid-template-columns: 13rem 1fr; align-items: baseline; } }
-.row h3 { font-size: 1.375rem; letter-spacing: -0.01em; line-height: 1.2; }
-.row p { color: var(--muted); max-width: 56ch; }
-
-.plain { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
-.plain li { padding-block: var(--s4); border-bottom: 1px solid var(--line); font: 500 1.25rem/1.3 var(--font-display); }
-
-/* Vault band */
-.band { border-top: 1px solid var(--line); padding-block: clamp(48px, 8vw, 96px); display: grid; gap: var(--s8); align-items: center; }
-@media (min-width: 880px) { .band { grid-template-columns: 1fr 1fr; gap: var(--s16); } }
-.band h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.1; letter-spacing: -0.02em; }
-.band .lede { max-width: 42ch; }
-.band .plain { margin-top: var(--s6); }
-
-/* Converter */
-.tool { background: var(--surface); border-radius: var(--radius); padding: clamp(16px, 3vw, 32px); display: grid; gap: var(--s6); }
-.field { display: grid; gap: var(--s2); min-width: 0; }
-.field label { font-size: 0.875rem; color: var(--muted); }
-.input {
-  width: 100%; min-height: 44px; padding: var(--s2) var(--s3);
-  font: 400 1rem/1.4 var(--font-body); color: var(--fg);
-  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
-  transition: border-color 150ms var(--ease);
-}
-.input:hover { border-color: var(--muted); }
-textarea.input { min-height: 120px; resize: vertical; }
-.row2 { display: grid; gap: var(--s4); }
-@media (min-width: 560px) { .row2 { grid-template-columns: 1fr 1fr; } }
-.results { margin: 0; display: grid; border-top: 1px solid var(--line); }
-.results div { display: flex; justify-content: space-between; gap: var(--s4); padding-block: var(--s3); border-bottom: 1px solid var(--line); }
-.results dt { color: var(--muted); }
-.results dd { margin: 0; font: 500 1rem/1.4 var(--font-data); font-variant-numeric: tabular-nums; text-align: right; overflow-wrap: anywhere; }
-.note { font-size: 0.875rem; color: var(--muted); }
-
-/* Compliance */
-.checks { list-style: none; margin: var(--s4) 0 0; padding: 0; border-top: 1px solid var(--line); }
-.checks li { padding-block: var(--s3); border-bottom: 1px solid var(--line); }
-.subhead { margin-top: var(--s8); font: 600 1.125rem/1.3 var(--font-display); }
-
-/* Contact */
-.contact-grid { display: grid; gap: var(--s8); }
-@media (min-width: 720px) { .contact-grid { grid-template-columns: 1fr 1.2fr; } }
-.details { margin: 0; display: grid; gap: var(--s4); align-content: start; }
-.details dt { font-size: 0.875rem; color: var(--muted); }
-.details dd { margin: 0; }
-.form { display: grid; gap: var(--s4); }
-.out { display: grid; gap: var(--s3); grid-column: 1 / -1; }
-.out[hidden] { display: none; }
-.out textarea { font-family: var(--font-data); font-size: 0.875rem; min-height: 200px; }
-.status { font-size: 0.875rem; color: var(--muted); min-height: 1.4em; }
-.out .cta { margin-top: 0; }
-
-/* Footer */
-footer { border-top: 1px solid var(--line); padding-block: var(--s12) var(--s12); color: var(--muted); font-size: 0.9375rem; display: grid; gap: var(--s8); }
-@media (min-width: 720px) { footer { grid-template-columns: 1.4fr 1fr 1fr; } }
-footer h2 { font: 600 0.875rem/1.3 var(--font-body); color: var(--fg); margin-bottom: var(--s3); }
-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s1); }
-footer a { text-decoration: none; display: inline-block; padding-block: var(--s1); }
-footer a:hover { color: var(--fg); }
-.logo-foot { display: inline-block; padding: var(--s2); }
-.logo-foot img { height: 132px; width: auto; }
-.legal { grid-column: 1 / -1; padding-top: var(--s6); border-top: 1px solid var(--line); font-size: 0.875rem; display: grid; gap: var(--s1); }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .menu-panel { animation: none; }
-  .btn, .nav a, .input, .top, .vtoggle { transition: none; }
-}
-</style>
+</script>
 </head>
 <body>
-<div class="wrap">
-  <header class="top" id="header">
-    <a class="mark" href="#top" aria-label="Eudirok Jewellery, back to top"><span class="logo-tile"><img src="media/logo.png" alt="" width="43" height="48"></span><span>Eudirok Jewellery</span></a>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head is-top" id="head">
+  <div class="util">
+    <div class="wrap util-in">
+      <span>Eudirok Jewellery L.L.C. S.O.C. &middot; Oud Metha, Dubai</span>
+      <span class="util-r">
+        <a href="mailto:info@eudirok.com">info@eudirok.com</a>
+        <a href="tel:+971585509345">+971 58 550 9345</a>
+      </span>
+    </div>
+  </div>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Eudirok Jewellery, back to top">
+      <span class="tile"><img src="media/logo.png" alt="" width="40" height="44"></span>
+      <span class="brand-name">Eudirok Jewellery<small>Precious metals &amp; stones</small></span>
+    </a>
     <nav class="nav" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#services">Services</a>
+      <a href="#dubai">Dubai</a>
       <a href="#storage">Storage</a>
       <a href="#tools">Converter</a>
       <a href="#compliance">Compliance</a>
-      <a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-head" href="#contact">Request a quote</a>
+    <a class="btn head-cta" href="#contact">Request a quote</a>
     <details class="menu" id="menu">
-      <summary class="btn btn-quiet" aria-label="Open menu">Menu</summary>
+      <summary aria-label="Open menu">Menu</summary>
       <nav class="menu-panel" aria-label="Sections">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#dubai">Dubai</a>
         <a href="#storage">Storage</a>
         <a href="#tools">Converter</a>
         <a href="#compliance">Compliance</a>
         <a href="#contact">Contact</a>
       </nav>
     </details>
-  </header>
+  </div>
+</header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="h1">
-      <picture><source media="(max-width: 640px)" srcset="media/hero-tall-poster.jpg"><img class="poster" src="media/hero-poster.jpg" alt="" width="1280" height="720"></picture>
-      <video id="hero-video" autoplay muted loop playsinline preload="auto" poster="media/hero-poster.jpg" aria-hidden="true" tabindex="-1"></video>
-      <div class="hero-inner">
-        <h1 id="h1">Precious metals and stones, traded from Dubai.</h1>
-        <p>Reliable, secure trading solutions for investors, institutions and industrial clients worldwide, from the first purchase to long-term storage.</p>
-        <div class="cta">
-          <a class="btn btn-gold" href="#contact">Request a quote</a>
-          <a class="btn btn-ghost" href="#services">See our services</a>
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="h1">
+    <div class="hero-media">
+      <picture>
+        <source media="(max-width: 700px)" srcset="media/hero-tall.jpg">
+        <img src="media/hero.jpg" alt="" width="1280" height="720">
+      </picture>
+      <video id="hero-video" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1" data-wide="media/hero.mp4" data-tall="media/hero-tall.mp4"></video>
+    </div>
+    <button class="vtoggle" id="vtoggle" type="button" aria-pressed="false">Pause video</button>
+    <div class="wrap hero-in">
+      <p class="eyebrow">Dubai &middot; Physical metals &amp; stones</p>
+      <h1 id="h1" style="margin-top: 20px">Gold, silver and gemstones, <em>traded</em> from Dubai.</h1>
+      <p class="hero-sub">Reliable, secure trading for investors, institutions and industrial clients worldwide, from the first purchase to long-term storage.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#contact">Request a quote</a>
+        <a class="btn btn-line" href="#services">Our services</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Metals</dt><dd>Gold, silver, platinum, palladium and other rare metals</dd></div>
+        <div><dt>Stones</dt><dd>Diamond, emerald, ruby, turquoise</dd></div>
+        <div><dt>Office</dt><dd>Oud Metha, Dubai</dd></div>
+        <div><dt>Trade licence</dt><dd class="mono">1553655</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="sec first" id="markets" aria-labelledby="h-markets">
+    <div class="wrap split">
+      <p class="eyebrow">What we trade</p>
+      <div>
+        <h2 id="h-markets" class="rv">Physical metals and stones, bought and sold as they are.</h2>
+        <div class="markets rv">
+          <div>
+            <h3>Metals</h3>
+            <ul>
+              <li>Gold <span>bars &middot; coins &middot; granules &middot; raw</span></li>
+              <li>Silver <span>bars &middot; coins &middot; granules</span></li>
+              <li>Platinum <span>bars &middot; coins &middot; granules</span></li>
+              <li>Palladium <span>bars &middot; coins &middot; granules</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Stones</h3>
+            <ul>
+              <li>Diamond <span>raw and certified</span></li>
+              <li>Emerald <span>coloured stones</span></li>
+              <li>Ruby <span>coloured stones</span></li>
+              <li>Turquoise <span>raw</span></li>
+            </ul>
+          </div>
         </div>
+        <p class="note rv" style="margin-top: 20px">Prices move continuously, so every deal is quoted per enquiry.</p>
       </div>
-      <button class="vtoggle" id="vtoggle" type="button" aria-pressed="false">Pause video</button>
-    </section>
+    </div>
+  </section>
 
-    <section class="trade" aria-label="What we trade">
-      <div>
-        <h2>Metals</h2>
-        <p>Gold, silver, platinum, palladium and other rare metals.</p>
-      </div>
-      <div>
-        <h2>Stones</h2>
-        <p>Raw diamond, emerald, ruby, turquoise and other precious stones.</p>
-      </div>
-    </section>
-
-    <section class="section" id="about" aria-labelledby="h-about">
-      <div>
-        <h2 id="h-about">About us</h2>
-      </div>
-      <div>
-        <figure>
-          <img class="photo photo-wide" src="media/gold-bar.jpg" alt="Close-up of a one kilogram fine gold bar stamped 999.9" width="1280" height="720" loading="lazy">
+  <section class="sec" id="about" aria-labelledby="h-about">
+    <div class="wrap split">
+      <p class="eyebrow">About us</p>
+      <div class="prose">
+        <figure class="about-fig rv">
+          <img src="media/gold-bar.jpg" alt="Close-up of a one kilogram fine gold bar stamped 999.9" width="1280" height="720" loading="lazy">
+          <figcaption>Fine gold, 999.9</figcaption>
         </figure>
-        <p class="body-copy" style="margin-top: var(--s8)">Eudirok Jewellery is a precious metals trading company based in Dubai. We buy, sell and store gold, silver, platinum and palladium, and give institutional and private clients transparent, secure and efficient access to the physical precious metals and stones markets.</p>
-        <p class="body-copy">What sets us apart is analytical expertise, strict compliance standards and personal service. Through our global network and careful risk management, we help partners diversify their portfolios, hedge against inflation and act on market movements.</p>
-        <dl class="pair">
+        <h2 id="h-about" class="rv">A trading house for clients who want the physical asset.</h2>
+        <div class="rv" style="margin-top: 28px">
+          <p>Eudirok Jewellery is a precious metals trading company based in Dubai. We buy, sell and store gold, silver, platinum and palladium, and give institutional and private clients transparent, secure and efficient access to the physical precious metals and stones markets.</p>
+          <p>What sets us apart is analytical expertise, strict compliance standards and personal service. Through our global network and careful risk management, we help partners diversify their portfolios, hedge against inflation and act on market movements.</p>
+        </div>
+        <dl class="pair rv">
           <div><dt>Mission</dt><dd>To give clients the tools, insights and security they need to make informed decisions in the precious metals market.</dd></div>
           <div><dt>Vision</dt><dd>To be the global leader in precious metal trading, setting standards for quality and service.</dd></div>
         </dl>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="services" aria-labelledby="h-services">
-      <div class="side stick">
-        <div>
-          <h2 id="h-services">Services</h2>
-          <p class="lede">From buying and selling to assay, vaulting and private client work.</p>
-        </div>
-        <figure>
-          <img class="photo photo-tall" src="media/souk.jpg" alt="Lit brass lanterns hanging in a vaulted souk arcade in Dubai" width="960" height="1080" loading="lazy">
-        </figure>
+  <section class="sec" id="services" aria-labelledby="h-services">
+    <div class="wrap services-grid">
+      <div class="services-side">
+        <p class="eyebrow">Services</p>
+        <h2 id="h-services" style="margin-top: 20px">What we do for clients.</h2>
+        <p class="lead">From buying and selling to assay, vaulting and private client work.</p>
+        <img src="media/souk.jpg" alt="Lit brass lanterns hanging in a vaulted arcade in Dubai" width="960" height="1080" loading="lazy">
       </div>
-      <ul class="rows">
-        <li class="row"><h3>Precious metals trading</h3><p>Physical gold, silver, platinum and palladium as bars, coins and granules, including raw gold and other precious metals. Metals are LBMA-certified and sourced through international refineries and suppliers.</p></li>
-        <li class="row"><h3>Diamonds, pearls and precious stones</h3><p>Trading in certified diamonds, pearls and coloured stones, including emeralds, rubies and sapphires, verified by recognised laboratories such as GIA and IGI.</p></li>
-        <li class="row"><h3>Jewellery trading</h3><p>New and used jewellery and accessories made of gold and silver.</p></li>
-        <li class="row"><h3>Import and export</h3><p>Cross-border trade in precious metals, stones and jewellery, with documented and insured logistics.</p></li>
-        <li class="row"><h3>Assay and certification</h3><p>Independent verification and grading through trusted laboratories, to confirm the authenticity and purity of what we trade.</p></li>
-        <li class="row"><h3>Private client services</h3><p>Discreet purchase and sale of physical metals and stones for high-net-worth individuals and family offices, including acquisition planning and liquidation.</p></li>
-        <li class="row"><h3>Research and tailored solutions</h3><p>Market research and analysis, and trading solutions shaped around each client.</p></li>
-      </ul>
-    </section>
+      <ol class="svc">
+        <li class="rv"><h3>Precious metals trading</h3><p>Physical gold, silver, platinum and palladium as bars, coins and granules, including raw gold and other precious metals. Metals are LBMA-certified and sourced through international refineries and suppliers.</p></li>
+        <li class="rv"><h3>Diamonds, pearls and precious stones</h3><p>Trading in certified diamonds, pearls and coloured stones, including emeralds, rubies and sapphires, verified by recognised laboratories such as GIA and IGI.</p></li>
+        <li class="rv"><h3>Jewellery trading</h3><p>New and used jewellery and accessories made of gold and silver.</p></li>
+        <li class="rv"><h3>Import and export</h3><p>Cross-border trade in precious metals, stones and jewellery, with documented and insured logistics.</p></li>
+        <li class="rv"><h3>Assay and certification</h3><p>Independent verification and grading through trusted laboratories, to confirm the authenticity and purity of what we trade.</p></li>
+        <li class="rv"><h3>Private client services</h3><p>Discreet purchase and sale of physical metals and stones for high-net-worth individuals and family offices, including acquisition planning and liquidation.</p></li>
+        <li class="rv"><h3>Research and tailored solutions</h3><p>Market research and analysis, and trading solutions shaped around each client.</p></li>
+      </ol>
+    </div>
+  </section>
 
-    <section class="band" id="storage" aria-labelledby="h-storage">
-      <figure>
-        <img class="photo" src="media/skyline.jpg" alt="Dubai skyline in silhouette at sunset, with the Burj Khalifa on the right" width="1395" height="930" loading="lazy">
-      </figure>
+  <section class="sec on-night" id="process" aria-labelledby="h-process">
+    <div class="wrap">
+      <p class="eyebrow">How a deal works</p>
+      <h2 id="h-process" style="margin-top: 20px" class="rv">From enquiry to delivery, documented at every step.</h2>
+      <ol class="steps">
+        <li class="rv"><span class="n">01</span><h3>Enquiry</h3><p>Tell us what you want to buy, sell or store.</p></li>
+        <li class="rv"><span class="n">02</span><h3>Quotation</h3><p>Prices move continuously, so we quote per enquiry.</p></li>
+        <li class="rv"><span class="n">03</span><h3>Verification</h3><p>Full client identification under our AML and KYC procedures, with complete documentation for every transaction.</p></li>
+        <li class="rv"><span class="n">04</span><h3>Delivery or storage</h3><p>Secure and insured logistics, or storage in high-security vaults within Dubai's free zones.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="dubai" aria-labelledby="h-dubai">
+    <div class="hero-media">
+      <picture>
+        <source media="(max-width: 700px)" srcset="media/night-tall.jpg">
+        <img src="media/night.jpg" alt="" width="1280" height="720" loading="lazy">
+      </picture>
+      <video id="band-video" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1" data-wide="media/night.mp4" data-tall="media/night-tall.mp4"></video>
+    </div>
+    <div class="wrap band-in">
       <div>
-        <h2 id="h-storage">Storage and vaulting</h2>
-        <p class="lede">Clients can store assets in high-security vaults within Dubai's free zones.</p>
-        <ul class="plain">
+        <p class="eyebrow">Our home market</p>
+        <h2 id="h-dubai" style="margin-top: 16px">Based in Dubai.</h2>
+      </div>
+      <p class="lead">A city built on trade, where gold has been bought and sold for generations.</p>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Dubai">
+    <div class="wrap shots">
+      <figure class="rv"><img src="media/creek.jpg" alt="Traditional stone and wind-tower buildings on Dubai Creek" width="1000" height="754" loading="lazy" style="object-position: 30% center"><figcaption>Dubai Creek</figcaption></figure>
+      <figure class="rv"><img src="media/burj.jpg" alt="The Burj Khalifa rising into a clear blue sky" width="720" height="959" loading="lazy"><figcaption>Downtown Dubai</figcaption></figure>
+      <figure class="rv"><img src="media/marina.jpg" alt="Towers and yachts at Dubai Marina" width="1000" height="752" loading="lazy" style="object-position: 40% center"><figcaption>Dubai Marina</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="storage" aria-labelledby="h-storage" style="border-top: 1px solid var(--rule)">
+    <div class="wrap storage">
+      <figure class="rv">
+        <img src="media/skyline.jpg" alt="Dubai skyline in silhouette at sunset, with the Burj Khalifa on the right" width="1395" height="930" loading="lazy">
+      </figure>
+      <div class="rv">
+        <p class="eyebrow">Storage and vaulting</p>
+        <h2 id="h-storage" style="margin-top: 20px">Held securely, in Dubai.</h2>
+        <p class="lead">Clients can store assets in high-security vaults within Dubai's free zones.</p>
+        <ul class="ticks">
           <li>24/7 security</li>
           <li>Full insurance</li>
           <li>Optional audit reports</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="gallery" id="dubai" aria-labelledby="h-dubai">
+  <section class="sec" id="why" aria-labelledby="h-why">
+    <div class="wrap split">
+      <p class="eyebrow">Why clients choose us</p>
       <div>
-        <h2 id="h-dubai">Based in Dubai</h2>
-        <p class="lede">A city built on trade, where gold has been bought and sold for generations.</p>
+        <h2 id="h-why" class="rv">Five reasons clients stay.</h2>
+        <ul class="why-list rv" style="margin-top: 40px">
+          <li>Extensive market knowledge and expertise</li>
+          <li>Competitive pricing and low transaction costs</li>
+          <li>A secure and transparent trading environment</li>
+          <li>Advanced technology and real-time data access</li>
+          <li>A strong global network of partners</li>
+        </ul>
       </div>
-      <div class="shots">
-        <figure><img class="photo" src="media/creek.jpg" alt="Traditional stone and wind-tower buildings on Dubai Creek" width="1000" height="754" loading="lazy" style="object-position: 30% center"><figcaption>Dubai Creek</figcaption></figure>
-        <figure><img class="photo" src="media/burj.jpg" alt="The Burj Khalifa rising into a clear blue sky" width="720" height="959" loading="lazy"><figcaption>Downtown Dubai</figcaption></figure>
-        <figure><img class="photo" src="media/marina.jpg" alt="Towers and yachts at Dubai Marina" width="1000" height="752" loading="lazy" style="object-position: 40% center"><figcaption>Dubai Marina</figcaption></figure>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="why" aria-labelledby="h-why">
+  <section class="sec" id="tools" aria-labelledby="h-tools">
+    <div class="wrap split">
       <div>
-        <h2 id="h-why">Why clients choose us</h2>
-      </div>
-      <ul class="plain">
-        <li>Extensive market knowledge and expertise</li>
-        <li>Competitive pricing and low transaction costs</li>
-        <li>A secure and transparent trading environment</li>
-        <li>Advanced technology and real-time data access</li>
-        <li>A strong global network of partners</li>
-      </ul>
-    </section>
-
-    <section class="section" id="tools" aria-labelledby="h-tools">
-      <div>
-        <h2 id="h-tools">Weight converter</h2>
-        <p class="lede">Metals are quoted in kilograms, troy ounces and tolas. Stones are sold by the carat. Enter one weight and read the rest.</p>
+        <p class="eyebrow">Weight converter</p>
+        <h2 id="h-tools" style="margin-top: 20px; font-size: clamp(1.6rem, 3vw, 2.25rem)">Kilograms, ounces, tolas, carats.</h2>
+        <p class="lead" style="font-size: 1rem">Metals are quoted in kilograms, troy ounces and tolas. Stones are sold by the carat. Enter one weight and read the rest.</p>
       </div>
       <div class="tool">
-        <div class="row2">
+        <div class="fields">
           <div class="field">
             <label for="w-val">Weight</label>
             <input class="input" id="w-val" type="number" inputmode="decimal" min="0" step="any" value="1">
@@ -418,99 +274,121 @@ footer a:hover { color: var(--fg); }
         <dl class="results" id="w-out" aria-live="polite"></dl>
         <p class="note">1 troy ounce = 31.1035 g. 1 tola = 11.6638 g. 1 carat = 0.2 g.</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="compliance" aria-labelledby="h-comp">
+  <section class="sec" id="compliance" aria-labelledby="h-comp">
+    <div class="wrap split">
+      <p class="eyebrow">Compliance</p>
       <div>
-        <h2 id="h-comp">Trust through transparency</h2>
-      </div>
-      <div>
-        <p class="body-copy">We are licensed by the Dubai Department of Economy and Tourism and operate under UAE federal law. We follow Anti-Money Laundering (AML) and Know Your Customer (KYC) guidelines.</p>
-        <p class="body-copy">Every trade follows international best practice for traceability, ethical sourcing and environmental responsibility.</p>
-        <h3 class="subhead">Our compliance policy ensures</h3>
-        <ul class="checks">
+        <h2 id="h-comp" class="rv">Trust through transparency.</h2>
+        <div class="prose rv" style="margin-top: 28px">
+          <p>We are licensed by the Dubai Department of Economy and Tourism and operate under UAE federal law. We follow Anti-Money Laundering (AML) and Know Your Customer (KYC) guidelines.</p>
+          <p>Every trade follows international best practice for traceability, ethical sourcing and environmental responsibility.</p>
+        </div>
+        <dl class="register rv">
+          <div><dt>Trading entity</dt><dd>Eudirok Jewellery L.L.C. S.O.C.</dd></div>
+          <div><dt>Trade licence</dt><dd class="mono">1553655</dd></div>
+          <div><dt>Commercial register</dt><dd class="mono">2705427</dd></div>
+          <div><dt>Issuing authority</dt><dd>Dubai Department of Economy and Tourism</dd></div>
+          <div><dt>goAML registration</dt><dd class="mono">31720</dd></div>
+        </dl>
+        <h3 class="subhead rv">Our compliance policy ensures</h3>
+        <ul class="checks rv">
           <li>Full client identification and verification</li>
           <li>Certified sourcing from conflict-free regions</li>
           <li>Complete documentation for every transaction</li>
           <li>Secure and insured logistics</li>
         </ul>
-        <dl class="pair">
-          <div><dt>Trading entity</dt><dd>Eudirok Jewellery L.L.C. S.O.C.</dd></div>
-          <div><dt>Trade licence</dt><dd>1553655</dd></div>
-          <div><dt>Commercial register</dt><dd>2705427</dd></div>
-          <div><dt>Issuing authority</dt><dd>Dubai Department of Economy and Tourism</dd></div>
-          <div><dt>goAML registration</dt><dd>31720</dd></div>
-        </dl>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="contact" aria-labelledby="h-contact">
-      <div>
-        <h2 id="h-contact">Contact us</h2>
-        <p class="lede">Tell us what you want to buy, sell or store. Prices move continuously, so we quote per enquiry.</p>
-      </div>
-      <div class="contact-grid">
-        <dl class="details">
-          <div><dt>Address</dt><dd>Abstract Business Center L.L.C., Building 06<br>Oud Metha, Dubai, United Arab Emirates</dd></div>
-          <div><dt>Email</dt><dd>info@eudirok.com</dd></div>
-          <div><dt>Phone</dt><dd>+971 58 550 9345</dd></div>
+  <section class="sec" id="contact" aria-labelledby="h-contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2 id="h-contact" style="margin-top: 20px" class="rv">Tell us what you want to buy, sell or store.</h2>
+      <p class="lead rv">Prices move continuously, so we quote per enquiry.</p>
+      <div class="contact-grid" style="margin-top: 56px">
+        <dl class="reach rv">
+          <div><dt>Email</dt><dd><a href="mailto:info@eudirok.com">info@eudirok.com</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+971585509345">+971 58 550 9345</a></dd></div>
+          <div><dt>Address</dt><dd class="addr">Abstract Business Center L.L.C., Building 06<br>Oud Metha, Dubai<br>United Arab Emirates</dd></div>
         </dl>
-        <form class="form" id="enq" novalidate>
-          <div class="field"><label for="f-name">Name</label><input class="input" id="f-name" autocomplete="name" required></div>
-          <div class="field"><label for="f-mail">Email</label><input class="input" id="f-mail" type="email" autocomplete="email" required></div>
-          <div class="field"><label for="f-int">I am interested in</label>
-            <select class="input" id="f-int">
-              <option>Precious metals</option>
-              <option>Gemstones</option>
-              <option>Storage and vaulting</option>
-              <option>Private client services</option>
-              <option>Something else</option>
-            </select>
+        <div class="rv">
+          <form class="form" id="enq" novalidate>
+            <div class="fields">
+              <div class="field"><label for="f-name">Name</label><input class="input" id="f-name" autocomplete="name" required></div>
+              <div class="field"><label for="f-mail">Email</label><input class="input" id="f-mail" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="field"><label for="f-int">I am interested in</label>
+              <select class="input" id="f-int">
+                <option>Precious metals</option>
+                <option>Gemstones</option>
+                <option>Storage and vaulting</option>
+                <option>Private client services</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-msg">Message</label><textarea class="input" id="f-msg" required></textarea></div>
+            <div class="cta"><button class="btn" type="submit">Prepare enquiry</button></div>
+            <p class="status" id="f-status" role="status"></p>
+          </form>
+          <div class="out" id="out" hidden>
+            <label for="out-text" class="note">Your enquiry, ready to send</label>
+            <textarea class="input" id="out-text" readonly></textarea>
+            <div class="cta">
+              <a class="btn btn-gold" id="mailto" href="mailto:info@eudirok.com">Open in your email app</a>
+              <button class="btn btn-line" type="button" id="copy" style="color: var(--ink)">Copy enquiry</button>
+            </div>
+            <p class="note">This page does not send messages itself. Open the enquiry in your email app, or copy it and email it to info@eudirok.com.</p>
           </div>
-          <div class="field"><label for="f-msg">Message</label><textarea class="input" id="f-msg" required></textarea></div>
-          <button class="btn" type="submit">Prepare enquiry</button>
-          <p class="status" id="f-status" role="status"></p>
-        </form>
-        <div class="out" id="out" hidden>
-          <label for="out-text" class="note">Your enquiry, ready to send</label>
-          <textarea class="input" id="out-text" readonly></textarea>
-          <div class="cta"><button class="btn" type="button" id="copy">Copy enquiry</button></div>
-          <p class="note">This page does not send messages. Copy the enquiry and email it to us at the address above.</p>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>
 
-  <footer>
-    <div>
-      <span class="logo-tile logo-foot"><img src="media/logo.png" alt="Eudirok Jewellery logo" width="118" height="132" loading="lazy"></span>
-      <p style="margin-top: var(--s3); max-width: 32ch">Precious metals and stones, traded from Dubai.</p>
-    </div>
-    <div>
-      <h2>Explore</h2>
-      <ul>
-        <li><a href="#about">About us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#compliance">Compliance</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div>
-      <h2>Visit</h2>
-      <p>Abstract Business Center L.L.C., Building 06<br>Oud Metha, Dubai,<br>United Arab Emirates</p>
-      <p style="margin-top: var(--s3)"><a href="#top">Back to top</a></p>
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <span class="tile"><img src="media/logo.png" alt="Eudirok Jewellery logo" width="86" height="96" loading="lazy"></span>
+        <p class="tag">Precious metals and stones, traded from Dubai.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#storage">Storage</a></li>
+          <li><a href="#compliance">Compliance</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="mailto:info@eudirok.com">info@eudirok.com</a></li>
+          <li><a href="tel:+971585509345">+971 58 550 9345</a></li>
+          <li><a href="#contact">Request a quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Visit</h2>
+        <p>Abstract Business Center L.L.C., Building 06<br>Oud Metha, Dubai<br>United Arab Emirates</p>
+      </div>
     </div>
     <div class="legal">
-      <p>© 2025 - 2026 Eudirok Jewellery L.L.C. S.O.C. Licensed in Dubai.</p>
-      <p>Metal and stone prices change continuously and are quoted per enquiry.</p>
+      <p>&copy; 2025 - 2026 Eudirok Jewellery L.L.C. S.O.C. Licensed in Dubai. Trade licence 1553655.</p>
+      <p>Metal and stone prices change continuously and are quoted per enquiry. Nothing on this site is an offer or investment advice.</p>
     </div>
-  </footer>
-</div>
+  </div>
+</footer>
 
 <script>
 (function () {
-  var header = document.getElementById('header');
-  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 8); }
+  var head = document.getElementById('head');
+  function onScroll() { head.classList.toggle('is-top', window.scrollY < 12); }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
@@ -519,25 +397,49 @@ footer a:hover { color: var(--fg); }
     if (e.target.closest && e.target.closest('.menu-panel a')) menu.removeAttribute('open');
   });
 
-  var video = document.getElementById('hero-video');
-  var tall = window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
-  video.poster = tall ? 'media/hero-tall-poster.jpg' : 'media/hero-poster.jpg';
-  video.src = tall ? 'media/hero-tall.mp4' : 'media/hero.mp4';
-  var toggle = document.getElementById('vtoggle');
+  /* Scroll reveal */
+  var rv = document.querySelectorAll('.rv');
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function setLabel() {
-    var paused = video.paused;
-    toggle.textContent = paused ? 'Play video' : 'Pause video';
-    toggle.setAttribute('aria-pressed', paused ? 'true' : 'false');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+    rv.forEach(function (el) { io.observe(el); });
+  } else {
+    rv.forEach(function (el) { el.classList.add('in'); });
   }
-  if (reduce) { try { video.pause(); } catch (e) {} }
-  toggle.addEventListener('click', function () {
-    if (video.paused) { var p = video.play(); if (p && p.catch) p.catch(function () {}); } else { video.pause(); }
+
+  /* Videos: pick the right file, fade in when playing, pause off-screen, one shared pause control */
+  var tall = window.matchMedia && window.matchMedia('(max-width: 700px)').matches;
+  var userPaused = reduce;
+  var hero = document.getElementById('hero-video');
+  var band = document.getElementById('band-video');
+  var toggle = document.getElementById('vtoggle');
+  [hero, band].forEach(function (v) {
+    v.src = tall ? v.getAttribute('data-tall') : v.getAttribute('data-wide');
+    v.addEventListener('playing', function () { v.classList.add('on'); });
   });
-  video.addEventListener('play', setLabel);
-  video.addEventListener('pause', setLabel);
+  function play(v) { if (userPaused) return; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+  function setLabel() {
+    toggle.textContent = userPaused ? 'Play video' : 'Pause video';
+    toggle.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
+  }
+  if ('IntersectionObserver' in window) {
+    var vio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) play(en.target); else en.target.pause();
+      });
+    }, { threshold: 0.15 });
+    vio.observe(hero); vio.observe(band);
+  } else { play(hero); }
+  toggle.addEventListener('click', function () {
+    userPaused = !userPaused;
+    setLabel();
+    [hero, band].forEach(function (v) { if (userPaused) v.pause(); else { var r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < window.innerHeight) play(v); } });
+  });
   setLabel();
 
+  /* Weight converter */
   var val = document.getElementById('w-val');
   var unit = document.getElementById('w-unit');
   var out = document.getElementById('w-out');
@@ -567,10 +469,12 @@ footer a:hover { color: var(--fg); }
   unit.addEventListener('change', render);
   render();
 
+  /* Enquiry */
   var form = document.getElementById('enq');
   var status = document.getElementById('f-status');
   var outBox = document.getElementById('out');
   var outText = document.getElementById('out-text');
+  var mailto = document.getElementById('mailto');
   function g(id) { return document.getElementById(id).value.trim(); }
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -579,14 +483,16 @@ footer a:hover { color: var(--fg); }
       return;
     }
     status.textContent = '';
-    outText.value = [
-      'To: info@eudirok.com',
-      'Enquiry for Eudirok Jewellery',
+    var subject = 'Enquiry: ' + document.getElementById('f-int').value;
+    var body = [
       'Name: ' + g('f-name'),
       'Email: ' + g('f-mail'),
       'Interested in: ' + document.getElementById('f-int').value,
-      'Message: ' + g('f-msg')
+      '',
+      g('f-msg')
     ].join('\n');
+    outText.value = ['To: info@eudirok.com', 'Subject: ' + subject, '', body].join('\n');
+    mailto.href = 'mailto:info@eudirok.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
     outBox.hidden = false;
   });
   document.getElementById('copy').addEventListener('click', function () {
