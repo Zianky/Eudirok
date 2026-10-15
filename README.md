@@ -1,17 +1,26 @@
 # Eudirok Jewellery website
 
-Static site (HTML, CSS, one small JS file). No build step.
+Static site: HTML, one stylesheet, one small script. No build step.
 
-Pages: Home, About us, Services, Sourcing, Compliance, Contacts. Media (photos, background videos, logo) is in `media/`.
+## Pages
 
-## Publish on GitHub Pages with eudirok.com
+- `/` Home: hero video, metals, stones, services, Dubai band, vaulting, sourcing and compliance summaries
+- `/about-us/` About us, mission and vision, Dubai photos
+- `/services/` The seven services, storage and vaulting, weight converter
+- `/sourcing/` Responsible gold sourcing: twelve steps, supplier requirements, what is not traded
+- `/compliance/` Governance, company register, roles, programme, policy request
+- `/contacts/` Enquiry form (prepares an email), phone, address
 
-1. Settings > Pages: publish from the `main` branch, root folder.
-2. `CNAME` already contains `eudirok.com`. Tick "Enforce HTTPS" once available.
-3. DNS: apex `eudirok.com` with four A records to 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153; `www` as a CNAME to `<github-username>.github.io`.
+All photos, videos and the logo are in `media/`.
+
+## Publishing
+
+GitHub Pages serves this repository from the root of `main`. The `CNAME` file holds `eudirok.com`.
+For the domain, point the apex to GitHub Pages (A records 185.199.108.153, 185.199.109.153,
+185.199.110.153, 185.199.111.153) and `www` to `<username>.github.io`, then enable "Enforce HTTPS".
 
 ## Editing
 
-- Text: edit the `index.html` inside each page folder.
-- Colours and fonts: variables at the top of `assets/css/style.css`.
-- The enquiry form prepares an email in the visitor's own mail app (a static site cannot send mail).
+- Text: edit the `index.html` file of each page.
+- Colours and type: variables at the top of `assets/css/style.css`.
+- Contact details: search for `info@eudirok.com` and `+971585509345`.
