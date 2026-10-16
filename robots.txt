@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://eudirok.com/sitemap.xml
+Sitemap: https://www.eudirok.com/sitemap.xml

@@ -48,7 +48,15 @@
     };
 
     videos.forEach(function (v) {
-      v.addEventListener("playing", function () { v.classList.add("on"); });
+      v.addEventListener("playing", function () {
+        v.classList.add("on");
+        if (vtoggle) vtoggle.hidden = false;
+      });
+      // If a browser cannot play the files, the poster photos stay and the pause control is hidden.
+      v.addEventListener("error", function () {
+        var started = videos.filter(function (x) { return x.getAttribute("src"); });
+        if (vtoggle && started.every(function (x) { return x.error; })) vtoggle.hidden = true;
+      });
     });
 
     var loadVideo = function (v) {
@@ -255,12 +263,36 @@
     var mailto = document.getElementById("mailto");
     var field = function (id) { return document.getElementById(id).value.trim(); };
 
+    var emailOk = function (v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); };
+    ["f-name", "f-mail", "f-msg"].forEach(function (id) {
+      document.getElementById(id).addEventListener("input", function () {
+        this.removeAttribute("aria-invalid");
+      });
+    });
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!field("f-name") || !field("f-mail") || !field("f-msg")) {
-        status.textContent = "Add your name, email and a short message so we can reply.";
+      var problems = [];
+      var firstBad = null;
+      var check = function (id, ok, message) {
+        var el = document.getElementById(id);
+        if (ok) { el.removeAttribute("aria-invalid"); return; }
+        el.setAttribute("aria-invalid", "true");
+        problems.push(message);
+        if (!firstBad) firstBad = el;
+      };
+      check("f-name", !!field("f-name"), "Enter your name.");
+      check("f-mail", emailOk(field("f-mail")), field("f-mail") ? "Enter a valid email address, such as name@company.com." : "Enter your email address.");
+      check("f-msg", !!field("f-msg"), "Write a short message so we know how to help.");
+      if (problems.length) {
+        status.classList.add("is-error");
+        status.textContent = problems.join(" ");
+        // Centre the first problem so the sticky header never covers it.
+        firstBad.focus({ preventScroll: true });
+        firstBad.scrollIntoView({ block: "center", behavior: reduceMotion ? "auto" : "smooth" });
         return;
       }
+      status.classList.remove("is-error");
       status.textContent = "";
       var interest = document.getElementById("f-int").value;
       var subject = "Enquiry: " + interest;
