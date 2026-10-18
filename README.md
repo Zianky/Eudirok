@@ -10,7 +10,8 @@ Static site: HTML, one stylesheet, one small script. No build step.
 - `/sourcing/` Responsible gold sourcing: twelve steps, supplier requirements, what is not traded
 - `/compliance/` Governance, company register, roles, programme, policy request
 - `/contacts/` Enquiry form (prepares an email), phone, address
-- `/privacy/` Privacy notice describing what the site does and does not collect
+- `/privacy/` Privacy notice: what is collected from visitors, enquiries and trading counterparties, who receives it, retention, rights
+- `/cookies/` Cookie policy: the site sets no cookies and uses no browser storage; lists what loads from other companies
 
 All photos, videos and the logo are in `media/`.
 
@@ -32,3 +33,10 @@ to `zianky.github.io` (CNAME record) and the bare `eudirok.com` to GitHub Pages 
 Before publishing, the pages were checked at 1440px and 390px for text contrast (including over the photos and
 video), touch-target size, keyboard focus, heading order, landmarks, form labels, page titles and descriptions,
 and broken links. The fonts are loaded from Google Fonts; self-hosting them would remove that third-party request.
+
+## Cookies and privacy
+
+The site sets no cookies, uses no browser storage, and has no analytics, advertising or social plugins, so it shows no cookie banner.
+The only requests to other companies are Google Fonts (typefaces) and the host, GitHub Pages. If you add any tracking or
+analytics tool, update `/cookies/` and `/privacy/` first and add a consent banner where the law requires one.
+To remove the Google Fonts request, host the two typefaces in `assets/fonts/` and change the stylesheet links in each page.
