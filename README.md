@@ -37,6 +37,10 @@ and broken links. The fonts are loaded from Google Fonts; self-hosting them woul
 ## Cookies and privacy
 
 The site sets no cookies, uses no browser storage, and has no analytics, advertising or social plugins, so it shows no cookie banner.
-The only requests to other companies are Google Fonts (typefaces) and the host, GitHub Pages. If you add any tracking or
+The only requests to other companies are Google Fonts (typefaces), Unsplash (some photographs) and the host, GitHub Pages. If you add any tracking or
 analytics tool, update `/cookies/` and `/privacy/` first and add a consent banner where the law requires one.
 To remove the Google Fonts request, host the two typefaces in `assets/fonts/` and change the stylesheet links in each page.
+
+## Photography
+
+Some photographs are linked from Unsplash (free to use under the Unsplash License) and credited on `/credits/`. They are not stored in this repository. To restore the version before the redesign: `git checkout before-redesign`.
