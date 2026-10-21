@@ -320,4 +320,45 @@
       });
     }
   }
+
+  /* ---- Scroll reveal, header state, mobile action bar ------------------- */
+  (function () {
+    var root = document.documentElement;
+    if (hasIO && !reduceMotion) {
+      root.classList.add("js-reveal");
+      var targets = document.querySelectorAll(".section-head, .split > *, .index li, .metal, .register > div, .stone-rows li, .about-grid > *, .storage-grid > *, .stones-grid > *, .steps > *, .cta .wrap > *");
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+      targets.forEach(function (el, i) {
+        el.classList.add("reveal");
+        el.style.setProperty("--d", (i % 4) * 70 + "ms");
+        io.observe(el);
+      });
+    }
+
+    var header = document.querySelector(".site-header");
+    if (header) {
+      var onScroll = function () { header.classList.toggle("is-scrolled", window.scrollY > 24); };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    }
+
+    var tel = document.querySelector('.site-footer a[href^="tel:"]');
+    var quote = document.querySelector(".head-cta");
+    var onContacts = /\/contacts\/?$/.test(location.pathname);
+    if (tel && quote && !onContacts && !document.querySelector(".mbar")) {
+      var bar = document.createElement("div");
+      bar.className = "mbar";
+      var a = document.createElement("a");
+      a.className = "btn btn-quiet"; a.href = tel.getAttribute("href"); a.textContent = "Call us";
+      var b = document.createElement("a");
+      b.className = "btn btn-primary"; b.href = quote.getAttribute("href"); b.textContent = "Request a quote";
+      bar.appendChild(a); bar.appendChild(b);
+      document.body.appendChild(bar);
+      document.body.classList.add("has-mbar");
+    }
+  })();
 })();
