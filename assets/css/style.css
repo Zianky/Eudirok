@@ -21,7 +21,7 @@
 
   --gutter: clamp(1.25rem, 4vw, 3.5rem);
   --max: 78rem;
-  --header-h: 4.5rem;
+  --header-h: 4.75rem;
 }
 
 *,
@@ -737,11 +737,12 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   flex: none;
-  padding: 0.28rem 0.4rem;
+  padding: 0.3rem 0.45rem;
   background: var(--bone);
-  border-radius: 3px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(185, 154, 91, 0.55), 0 6px 18px rgba(0, 0, 0, 0.35);
 }
-.logo-tile img { height: 2.5rem; width: auto; }
+.logo-tile img { height: 3.1rem; width: auto; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
 .brand-text .brand-sub { font-style: normal; font-size: 0.8rem; }
 .head-cta { padding: 0.65rem 1.2rem; font-size: 0.9rem; }
@@ -1121,7 +1122,7 @@ figure { margin: 0; }
 .reach a { display: inline-block; padding-block: 0.6rem; margin-block: -0.6rem; text-decoration: none; }
 .reach a:hover { color: var(--gold-soft); }
 
-.footer-brand .logo-tile img { height: 4.5rem; }
+.footer-brand .logo-tile img { height: 5.5rem; }
 .footer-brand .logo-tile { margin-bottom: 1rem; }
 .footer-legal p + p { margin-top: 0.4rem; }
 .footer-grid { grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.8fr) minmax(0, 1fr) minmax(0, 1fr); }
