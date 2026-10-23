@@ -258,7 +258,7 @@
     var status = document.getElementById("f-status");
     var submit = form.querySelector('[type="submit"]');
     var field = function (id) { return document.getElementById(id).value.trim(); };
-    var emailOk = function (v) { return /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(v); };
+    var emailOk = function (v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); };
 
     ["f-name", "f-mail", "f-msg"].forEach(function (id) {
       document.getElementById(id).addEventListener("input", function () {
