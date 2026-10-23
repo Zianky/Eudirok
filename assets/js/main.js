@@ -252,18 +252,14 @@
   }
 
   /* ---- Enquiry ---------------------------------------------------------- */
-  // The site is static, so the enquiry is prepared on the page and sent from
-  // the visitor's own email app.
+  // Send the contact enquiry through Formspree, with an accessible inline status.
   var form = document.querySelector("[data-enquiry]");
   if (form) {
-    var to = form.getAttribute("data-to");
     var status = document.getElementById("f-status");
-    var outBox = document.getElementById("out");
-    var outText = document.getElementById("out-text");
-    var mailto = document.getElementById("mailto");
+    var submit = form.querySelector('[type="submit"]');
     var field = function (id) { return document.getElementById(id).value.trim(); };
+    var emailOk = function (v) { return /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(v); };
 
-    var emailOk = function (v) { return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v); };
     ["f-name", "f-mail", "f-msg"].forEach(function (id) {
       document.getElementById(id).addEventListener("input", function () {
         this.removeAttribute("aria-invalid");
@@ -287,38 +283,34 @@
       if (problems.length) {
         status.classList.add("is-error");
         status.textContent = problems.join(" ");
-        // Centre the first problem so the sticky header never covers it.
         firstBad.focus({ preventScroll: true });
         firstBad.scrollIntoView({ block: "center", behavior: reduceMotion ? "auto" : "smooth" });
         return;
       }
-      status.classList.remove("is-error");
-      status.textContent = "";
-      var interest = document.getElementById("f-int").value;
-      var subject = "Enquiry: " + interest;
-      var body = [
-        "Name: " + field("f-name"),
-        "Email: " + field("f-mail"),
-        "Interested in: " + interest,
-        "",
-        field("f-msg")
-      ].join("\n");
-      outText.value = ["To: " + to, "Subject: " + subject, "", body].join("\n");
-      mailto.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-      outBox.hidden = false;
-      outBox.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
-    });
 
-    var copy = document.getElementById("copy");
-    if (copy) {
-      copy.addEventListener("click", function () {
-        var done = function () { status.textContent = "Copied."; };
-        var fallback = function () { outText.focus(); outText.select(); status.textContent = "Select the text and copy it."; };
-        try {
-          navigator.clipboard.writeText(outText.value).then(done, fallback);
-        } catch (err) { fallback(); }
+      status.classList.remove("is-error");
+      status.textContent = "Sending your enquiry…";
+      submit.disabled = true;
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      }).then(function (response) {
+        if (!response.ok) {
+          return response.json().catch(function () { return {}; }).then(function (data) {
+            var detail = data.errors && data.errors.length ? " " + data.errors.map(function (item) { return item.message; }).join(" ") : "";
+            throw new Error(detail || "Please try again, or email info@eudirok.com.");
+          });
+        }
+        form.reset();
+        status.textContent = "Thank you. Your enquiry has been sent to Eudirok.";
+      }).catch(function (error) {
+        status.classList.add("is-error");
+        status.textContent = "We couldn't send your enquiry." + (error.message ? " " + error.message : " Please email info@eudirok.com.");
+      }).then(function () {
+        submit.disabled = false;
       });
-    }
+    });
   }
 
   /* ---- Scroll reveal, header state, mobile action bar ------------------- */
