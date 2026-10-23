@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://images.unsplash.com; media-src 'self'; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; form-action https://formspree.io">
 <title>Contacts | Eudirok Jewellery</title>
 <meta name="description" content="Contact Eudirok Jewellery in Dubai about professional precious metals transactions.">
 <meta name="theme-color" content="#0b1411">
@@ -58,32 +58,24 @@
 <section class="section tone-deep">
   <div class="wrap contact-grid">
     <div>
-      <form id="enq" data-enquiry data-to="info@eudirok.com" novalidate aria-label="Enquiry form">
+      <form id="enq" data-enquiry action="https://formspree.io/f/xgaawgvd" method="POST" novalidate aria-label="Enquiry form">
         <div class="fields">
           <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required></div>
         </div>
         <div class="field">
           <label for="f-int">I am interested in</label>
-          <select id="f-int">
+          <select id="f-int" name="interest">
             <option>Precious metals</option>
             <option>Something else</option>
           </select>
         </div>
         <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
-        <p class="note" style="margin-bottom:1.5rem">The form prepares an email on your device. Nothing is sent until you send it. See our <a href="../privacy/">privacy notice</a>.</p>
-        <button class="btn btn-primary" type="submit">Prepare enquiry</button>
+        <input type="hidden" name="_subject" value="Website enquiry — Eudirok Jewellery">
+        <p class="note" style="margin-bottom:1.5rem">Your enquiry will be sent securely to Eudirok via Formspree. See our <a href="../privacy/">privacy notice</a>.</p>
+        <button class="btn btn-primary" type="submit">Send enquiry</button>
         <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
       </form>
-      <div class="out" id="out" hidden>
-        <label for="out-text">Your enquiry, ready to send</label>
-        <textarea id="out-text" readonly></textarea>
-        <div class="btn-row">
-          <a class="btn btn-primary" id="mailto" href="mailto:info@eudirok.com">Open in your email app</a>
-          <button class="btn btn-quiet" type="button" id="copy">Copy enquiry</button>
-        </div>
-        <p class="note">This page does not send messages itself. Open the enquiry in your email app, or copy it and email it to info@eudirok.com.</p>
-      </div>
     </div>
     <div class="address">
       <dl class="reach">
