@@ -1292,3 +1292,22 @@ a, button { -webkit-tap-highlight-color: rgba(185, 154, 91, 0.25); }
   .hero-copy { max-width: 100%; }
   .hero h1 { font-size: clamp(1.8rem, 9vw, 3rem); }
 }
+
+
+/* ---- Homepage hero kicker --------------------------------------------- */
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.25rem;
+  color: var(--gold-soft);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.5;
+}
+.hero-kicker span { color: var(--platinum); }
+@media (max-width: 700px) {
+  .hero-kicker { font-size: 0.66rem; letter-spacing: 0.13em; margin-bottom: 0.9rem; }
+}
+
