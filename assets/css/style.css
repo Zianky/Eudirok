@@ -1311,3 +1311,11 @@ a, button { -webkit-tap-highlight-color: rgba(185, 154, 91, 0.25); }
   .hero-kicker { font-size: 0.66rem; letter-spacing: 0.13em; margin-bottom: 0.9rem; }
 }
 
+
+/* Editorial metal cards */
+.metals-eyebrow{font-size:.78rem;letter-spacing:.18em;color:var(--gold-soft);margin-bottom:1rem}
+.metals-showcase .metal-bar{aspect-ratio:4/5;overflow:hidden;border:1px solid rgba(214,191,138,.25)}
+.metals-showcase .metal-photo{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.metals-showcase .metal:hover .metal-photo{transform:scale(1.04)}
+.metals-showcase .metal-info h3{font-family:var(--font-display)!important;font-size:1.55rem!important}
+@media(prefers-reduced-motion:reduce){.metals-showcase .metal-photo{transition:none}}
