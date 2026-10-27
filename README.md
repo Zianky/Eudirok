@@ -7,7 +7,10 @@ Static site: HTML, one stylesheet, one small script. No build step.
 - `/` Home: hero video, metals, stones, services, Dubai band, vaulting, sourcing and compliance summaries
 - `/about-us/` About us, mission and vision, Dubai photos
 - `/services/` The seven services, storage and vaulting, weight converter
-- `/sourcing/` Responsible gold sourcing: twelve steps, supplier requirements, what is not traded
+- `/sourcing/` Responsible gold sourcing: twelve steps, supplier requirements, what is not traded, the UAE five-step framework
+- `/guide/` Buyer's guide: purity, weight and paperwork for gold, silver, platinum and palladium
+- `/uae-gold-market/` Dubai and the UAE gold market: DMCC, UAE Good Delivery, storage, events
+- `/market-notes/` Market notes: figures from the World Gold Council, Silver Institute and WPIC, to be updated each quarter
 - `/compliance/` Governance, company register, roles, programme, policy request
 - `/contacts/` Enquiry form (prepares an email), phone, address
 - `/privacy/` Privacy notice: what is collected from visitors, enquiries and trading counterparties, who receives it, retention, rights
