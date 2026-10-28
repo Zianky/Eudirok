@@ -1,13 +1,21 @@
 {
   "name": "Eudirok Jewellery",
   "short_name": "Eudirok",
-  "description": "Precious metals and stones, traded from Dubai.",
+  "description": "Precious metals trading from Dubai.",
   "start_url": "/",
   "display": "browser",
   "background_color": "#0b1411",
   "theme_color": "#0b1411",
   "icons": [
-    {"src": "/media/icon-192.png", "sizes": "192x192", "type": "image/png"},
-    {"src": "/media/icon-512.png", "sizes": "512x512", "type": "image/png"}
+    {
+      "src": "/media/icon-gold-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/media/icon-gold-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ]
 }
