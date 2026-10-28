@@ -1351,4 +1351,4 @@ a, button { -webkit-tap-highlight-color: rgba(185, 154, 91, 0.25); }
 }
 
 /* A fine soft edge keeps the black band visible against the dark site. */
-.logo-tile img { filter: drop-shadow(0 0 1px rgba(214,191,138,.65)); }
+.logo-tile img { filter: drop-shadow(0 0 .35px rgba(214,191,138,.55)); }
