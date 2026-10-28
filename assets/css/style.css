@@ -1325,14 +1325,14 @@ a, button { -webkit-tap-highlight-color: rgba(185, 154, 91, 0.25); }
   .hero .wrap { padding-top: 6rem; }
 }
 
-/* Gold Africa identity: light backing preserves the black continent band. */
+/* Gold Africa identity, responsive sizing. */
 :root { --header-h: 6.25rem; }
 .brand { gap: 1rem; min-width: 0; }
 .logo-tile {
   padding: .4rem .55rem;
-  background: #f6f2e9;
-  border-radius: 5px;
-  box-shadow: 0 0 0 1px rgba(214,191,138,.45), 0 4px 16px rgba(0,0,0,.18);
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
 }
 .logo-tile img { width: 6.25rem; height: auto; object-fit: contain; }
 .footer-brand .logo-tile { padding: .75rem; margin-bottom: 1.25rem; }
@@ -1349,3 +1349,6 @@ a, button { -webkit-tap-highlight-color: rgba(185, 154, 91, 0.25); }
   .brand-name { font-size: 1rem; letter-spacing: .1em; }
   .nav-toggle { padding-inline: .8rem; }
 }
+
+/* A fine soft edge keeps the black band visible against the dark site. */
+.logo-tile img { filter: drop-shadow(0 0 1px rgba(214,191,138,.65)); }
