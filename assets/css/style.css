@@ -1319,3 +1319,8 @@ a, button { -webkit-tap-highlight-color: rgba(185, 154, 91, 0.25); }
 .metals-showcase .metal:hover .metal-photo{transform:scale(1.04)}
 .metals-showcase .metal-info h3{font-family:var(--font-display)!important;font-size:1.55rem!important}
 @media(prefers-reduced-motion:reduce){.metals-showcase .metal-photo{transition:none}}
+
+/* Reserve space for the video control above the mobile hero copy. */
+@media (max-width: 700px) {
+  .hero .wrap { padding-top: 6rem; }
+}

@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..600&family=Hanken+Grotesk:wght@300..600&display=swap">
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/style.css?v=review-20261028">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.eudirok.com/"}, {"@type": "ListItem", "position": 2, "name": "Contacts", "item": "https://www.eudirok.com/contacts/"}]}</script>
 </head>
 <body>
@@ -66,11 +66,19 @@
         <div class="field">
           <label for="f-int">I am interested in</label>
           <select id="f-int" name="interest">
-            <option>Precious metals</option>
-            <option>Something else</option>
+            <option value="Precious metals">Select a metal or topic</option>
+            <option>Gold</option>
+            <option>Silver</option>
+            <option>Platinum</option>
+            <option>Palladium</option>
+            <option>Other enquiry</option>
           </select>
         </div>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required></textarea></div>
+        <div class="fields">
+          <div class="field"><label for="f-quantity">Indicative quantity (optional)</label><input id="f-quantity" name="quantity" maxlength="100" placeholder="e.g. 10 kg or 100 troy oz"></div>
+          <div class="field"><label for="f-destination">Destination (optional)</label><input id="f-destination" name="destination" maxlength="120" placeholder="City and country"></div>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required aria-describedby="f-msg-hint"></textarea><p class="note" id="f-msg-hint">Tell us the product form, timing and any specific requirements. Please do not include identity documents, bank details or other sensitive records.</p></div>
         <input type="hidden" name="_subject" value="Website enquiry — Eudirok Jewellery">
         <p class="note" style="margin-bottom:1.5rem">Your enquiry will be sent securely to Eudirok via Formspree. See our <a href="../privacy/">privacy notice</a>.</p>
         <button class="btn btn-primary" type="submit">Send enquiry</button>
