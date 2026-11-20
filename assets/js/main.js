@@ -5,6 +5,30 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var hasIO = "IntersectionObserver" in window;
 
+  /* ---- On-demand Dubai film -------------------------------------------- */
+  var dubaiDialog = document.getElementById("dubai-film-dialog");
+  var openDubaiFilm = document.querySelector("[data-open-dubai-film]");
+  if (dubaiDialog && openDubaiFilm && typeof dubaiDialog.showModal === "function") {
+    var dubaiVideo = dubaiDialog.querySelector("video");
+    var dubaiSource = dubaiVideo && dubaiVideo.querySelector("source[data-src]");
+    var closeDubaiFilm = function () {
+      if (!dubaiVideo || !dubaiSource) return;
+      dubaiVideo.pause();
+      dubaiVideo.currentTime = 0;
+      dubaiSource.removeAttribute("src");
+      dubaiVideo.load();
+    };
+    openDubaiFilm.addEventListener("click", function () {
+      if (!dubaiSource.src) { dubaiSource.src = dubaiSource.getAttribute("data-src"); dubaiVideo.load(); }
+      dubaiDialog.showModal();
+      var playback = dubaiVideo.play();
+      if (playback && playback.catch) playback.catch(function () {});
+    });
+    dubaiDialog.querySelector("[data-close-dubai-film]").addEventListener("click", function () { dubaiDialog.close(); });
+    dubaiDialog.addEventListener("close", closeDubaiFilm);
+    dubaiDialog.addEventListener("click", function (event) { if (event.target === dubaiDialog) dubaiDialog.close(); });
+  }
+
   /* ---- Mobile navigation ------------------------------------------------ */
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("primary-nav");
@@ -255,6 +279,14 @@
   // Send the contact enquiry through Formspree, with an accessible inline status.
   var form = document.querySelector("[data-enquiry]");
   if (form) {
+    var interest = document.getElementById("f-int");
+    var requestedMetal = new URLSearchParams(window.location.search).get("metal");
+    if (interest && requestedMetal) {
+      var matchingOption = Array.prototype.find.call(interest.options, function (option) {
+        return option.value.toLowerCase() === requestedMetal.toLowerCase();
+      });
+      if (matchingOption) interest.value = matchingOption.value;
+    }
     var status = document.getElementById("f-status");
     var submit = form.querySelector('[type="submit"]');
     var field = function (id) { return document.getElementById(id).value.trim(); };
@@ -318,7 +350,7 @@
     var root = document.documentElement;
     if (hasIO && !reduceMotion) {
       root.classList.add("js-reveal");
-      var targets = document.querySelectorAll(".section-head, .split > *, .index li, .metal, .register > div, .stone-rows li, .about-grid > *, .storage-grid > *, .stones-grid > *, .steps > *, .cta .wrap > *");
+      var targets = document.querySelectorAll(".section-head, .split > *, .index li, .metal, .journey-interactive > li, .register > div, .stone-rows li, .about-grid > *, .storage-grid > *, .stones-grid > *, .steps > *, .cta .wrap > *");
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
           if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
